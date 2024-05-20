@@ -5,19 +5,19 @@ const UserMenu = () => {
   return (
     <>
       <div className="w-full bg-blue-700 ">
-        <ul className="flex flex-col text-xl text-white px-4 py-4 gap-4">
-          <li className="text-center ">
+        <ul className="flex flex-col text-xl text-white px-4 py-4 gap-1">
+          <li className=" px-5 py-3 text-center hover:bg-blue-800">
             <Link
-              className=" px-5 py-3 rounded-lg hover:bg-blue-900 cursor-pointer text-center  "
+              className="  rounded-lg hover:bg-blue-800 cursor-pointer text-center  "
               to="/dashboard/user/profile"
             >
               Profile
             </Link>
           </li>
 
-          <li className="text-center">
+          <li className=" px-5 py-3 text-center hover:bg-blue-800">
             <Link
-              className=" w-full hover:bg-blue-900 px-5 py-3 rounded-lg cursor-pointer"
+              className="rounded-lg hover:bg-blue-800 cursor-pointer text-center "
               to="/dashboard/user/orders"
             >
               Orders

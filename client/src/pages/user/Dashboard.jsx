@@ -7,7 +7,7 @@ const AdminDashboard = () => {
   const [auth] = useAuth();
   return (
     <Layout title={"Dashboard - Ecommerce App"}>
-      <div className="relative h-fit bottom-10">
+      <div className="relative mt-16 h-fit bottom-10">
         {/* left side bar */}
         <div>
           <UserMenu />

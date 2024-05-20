@@ -230,7 +230,7 @@ const HomePage = () => {
             <div>
               {products && products.length < total && (
                 <button
-                  className="bg-yellow-400 mt-10 flex flex-row justify-center items-center align-middle px-5 py-3 rounded-full text-3xl"
+                  className="bg-yellow-400 mt-10 flex flex-row justify-center relative left-[50%] items-center align-middle px-5 py-3 rounded-full text-3xl"
                   onClick={(e) => {
                     e.preventDefault();
                     setPage(page + 1);

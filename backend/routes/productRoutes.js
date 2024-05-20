@@ -13,8 +13,11 @@ import {
   searchProductController,
   relatedProductController,
   productCategoryController,
+  braintreeTokenController,
+  braintreePaymentController,
 } from "../controllers/productController.js";
 import formidable from "express-formidable";
+import braintree from "braintree";
 
 const router = express.Router();
 
@@ -67,5 +70,12 @@ router.get("/related-product/:pid/:cid", relatedProductController);
 
 // category related products
 router.get("/product-category/:slug", productCategoryController);
+
+//payment routes
+// tokens
+router.get("/braintree/token", braintreeTokenController);
+
+// payments
+router.post("/braintree/payment", requireSignIn, braintreePaymentController);
 
 export default router;

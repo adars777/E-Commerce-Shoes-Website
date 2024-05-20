@@ -39,7 +39,7 @@ const Header = () => {
           <div className="flex items-center w-full justify-between">
             <div>
               <Link to="/" className="flex-shrink-0 text-white">
-                Logo
+                FabiStep
               </Link>
             </div>
 
@@ -209,7 +209,7 @@ const Header = () => {
           {/* category */}
           <Link
             className="text-gray-300  hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            to="/category"
+            to={`/categories`}
           >
             Category
           </Link>
