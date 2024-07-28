@@ -30,7 +30,7 @@ const CartPage = () => {
   const getToken = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/braintree/token`
+        `https://e-commerce-shoes-website-backend.onrender.com/api/v1/product/braintree/token`
       );
       setClientToken(data?.clientToken);
     } catch (err) {
@@ -63,7 +63,7 @@ const CartPage = () => {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
       const { data } = await axios.post(
-        `http://localhost:8080/api/v1/product/braintree/payment`,
+        `https://e-commerce-shoes-website-backend.onrender.com/api/v1/product/braintree/payment`,
         {
           nonce,
           cart,
