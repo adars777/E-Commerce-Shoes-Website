@@ -20,7 +20,7 @@ const ProductDetails = () => {
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/get-product/${params.slug}`
+        `https://e-commerce-shoes-website-backend.onrender.com/api/v1/product/get-product/${params.slug}`
       );
       setProduct(data?.product);
       getSimilarProducts(data?.product._id, data?.product.category._id);
@@ -33,7 +33,7 @@ const ProductDetails = () => {
   const getSimilarProducts = async (pid, cid) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/related-product/${pid}/${cid}`
+        `https://e-commerce-shoes-website-backend.onrender.com/api/v1/product/related-product/${pid}/${cid}`
       );
       setRelatedProduct(data?.products);
     } catch (err) {
