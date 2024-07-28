@@ -12,7 +12,7 @@ const AdminRoute = () => {
   useEffect(() => {
     const authCheck = async () => {
       const res = await axios.get(
-        "http://localhost:8080/api/v1/auth/admin-auth",
+        "https://e-commerce-shoes-website-backend.onrender.com/api/v1/auth/admin-auth",
         {
           headers: {
             Authorization: auth?.token,
