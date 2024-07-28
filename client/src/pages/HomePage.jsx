@@ -35,7 +35,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-list/${page}`
+        `https://e-commerce-shoes-website-backend.onrender.com/api/v1/product/product-list/${page}`
       );
       setLoading(false);
 
@@ -57,7 +57,7 @@ const HomePage = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/category/get-category`
+        `https://e-commerce-shoes-website-backend.onrender.com/api/v1/category/get-category`
       );
       if (data?.success) {
         setCategories(data?.category);
@@ -76,7 +76,7 @@ const HomePage = () => {
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
-        `http://localhost:8080/api/v1/product/product-filters`,
+        `https://e-commerce-shoes-website-backend.onrender.com/api/v1/product/product-filters`,
         { checked, radio }
       );
       setProducts(data?.products);
@@ -89,7 +89,7 @@ const HomePage = () => {
   const getTotal = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-count`
+        `https://e-commerce-shoes-website-backend.onrender.com/api/v1/product/product-count`
       );
       setTotal(data?.total);
     } catch (err) {
@@ -102,7 +102,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `http://localhost:8080/api/v1/product/product-list/${page}`
+        `https://e-commerce-shoes-website-backend.onrender.com/api/v1/product/product-list/${page}`
       );
       setLoading(false);
       setProducts([...products, ...data?.products]);
