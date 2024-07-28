@@ -22,7 +22,7 @@ const CreateCategory = () => {
       // const token = getToken();
       // console.log(token);
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/category/create-category",
+        "https://e-commerce-shoes-website-backend.onrender.com/api/v1/category/create-category",
         { name },
         {
           headers: {
@@ -69,7 +69,7 @@ const CreateCategory = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        `http://localhost:8080/api/v1/category/update-category/${selected._id}`,
+        `https://e-commerce-shoes-website-backend.onrender.com/api/v1/category/update-category/${selected._id}`,
         { name: updateName },
         {
           headers: {
@@ -97,7 +97,7 @@ const CreateCategory = () => {
   const handleDelete = async (pId) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:8080/api/v1/category/delete-category/${pId}`,
+        `https://e-commerce-shoes-website-backend.onrender.com/api/v1/category/delete-category/${pId}`,
         {
           headers: {
             // Include JWT token in the Authorization header
